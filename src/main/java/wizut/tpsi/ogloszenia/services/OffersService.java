@@ -91,4 +91,13 @@ public class OffersService {
     return offer;
     }
     
+    public Offer deleteOffer(Integer id) {
+    Offer offer = em.find(Offer.class, id);
+    em.remove(offer);
+    return offer;
+    }
+    
+    public Offer saveOffer(Offer offer) {
+    return em.merge(offer);
+    }  
 }
