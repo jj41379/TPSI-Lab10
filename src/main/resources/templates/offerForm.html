@@ -15,36 +15,43 @@
         <label class="col-sm-2 control-label">Tytuł:</label>
             <div class="col-sm-10" th:classappend="${#fields.hasErrors('*{title}')?'has-error':''}">
                 <input type="text" th:field="*{title}" class="form-control"/>
+                <span th:errors="*{title}" />
             </div>
     </div>
     <div class="form-group">
         <label class="col-sm-2 control-label">Rocznik:</label>
         <div class="col-sm-4" th:classappend="${#fields.hasErrors('*{year}')?'has-error':''}">
             <input type="number" th:field="*{year}" class="form-control"/>
+            <span th:errors="*{year}" />
         </div>
-        <label class="col-sm-2 control-label">Przebieg:</label>
+        <label class="col-sm-2 control-label">Przebieg (km):</label>
         <div class="col-sm-4" th:classappend="${#fields.hasErrors('*{mileage}')?'has-error':''}">
             <input type="number" th:field="*{mileage}" class="form-control"/>
+            <span th:errors="*{mileage}" />
         </div>
     </div>
     <div class="form-group">
-        <label class="col-sm-2 control-label">Pojemność silnika:</label>
+        <label class="col-sm-2 control-label">Pojemność silnika (L):</label>
         <div class="col-sm-4" th:classappend="${#fields.hasErrors('*{engineSize}')?'has-error':''}">
             <input type="number" th:field="*{engineSize}" step="0.1" class="form-control"/>
+            <span th:errors="*{engineSize}" />
         </div>
-        <label class="col-sm-2 control-label">Moc silnika:</label>
+        <label class="col-sm-2 control-label">Moc silnika (KM):</label>
         <div class="col-sm-4" th:classappend="${#fields.hasErrors('*{enginePower}')?'has-error':''}">
             <input type="number" th:field="*{enginePower}" class="form-control"/>
+            <span th:errors="*{enginePower}" />
         </div>
     </div>
     <div class="form-group">
         <label class="col-sm-2 control-label">Liczba drzwi:</label>
         <div class="col-sm-4" th:classappend="${#fields.hasErrors('*{doors}')?'has-error':''}">
             <input type="number" th:field="*{doors}" class="form-control"/>
+            <span th:errors="*{doors}" />
         </div>
         <label class="col-sm-2 control-label">Kolor:</label>
         <div class="col-sm-4" th:classappend="${#fields.hasErrors('*{colour}')?'has-error':''}">
             <input type="text" th:field="*{colour}" class="form-control"/>
+            <span th:errors="*{colour}" />
         </div>
     </div>
     <div class="form-group">
@@ -73,12 +80,14 @@
         <label class="col-sm-2 control-label">Cena:</label>
         <div class="col-sm-4" th:classappend="${#fields.hasErrors('*{price}')?'has-error':''}">
             <input type="number" th:field="*{price}" class="form-control"/>
+            <span th:errors="*{price}" />
         </div>
     </div>
     <div class="form-group">
         <label class="col-sm-2 control-label">Opis:</label>
         <div class="col-sm-10" th:classappend="${#fields.hasErrors('*{title}')?'has-error':''}">
             <textarea th:field="*{description}" class="form-control" rows="5"/>
+            <span th:errors="*{description}" />
         </div>
     </div>
     <div class="form-group">
